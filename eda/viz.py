@@ -121,4 +121,19 @@ def cntChart(total_df, cgg_nm):
     st.plotly_chart(fig)
     
 def showViz(total_df): 
-    total_df['CTRT_DAY'] = #자치구 선택pd.to_datetime(total_df['CTRT_DAY'], format="%Y-%m-%d")ssg_nm= st.sidebar.selectbox", sorted(total_df['CGG_NM'].unique()))#차트 메뉴 선택selected = st.sidebar.radio("차트 메뉴, ['가구당 평균 가격 추세', '가구당 거래 건수', '지역별 평균 가격 막대 그래프])if selected == * 2 *#*:meanChart(total_df, ssg_nm)elif selected == * 42H 24":cntChart(total_df, ssg_nm)elif selected == "지역별 평균 가격 막대 그래프":else:barChart(total_df)st.warning("Error")
+    total_df['CTRT_DAY'] = pd.to_datetime(total_df['CTRT_DAY'], format="%Y-%m-%d")
+    
+    ssg_nm = st.sidebar.selectbox("자치구명", sorted(total_df['CGG_NM'].unique()))
+    
+    #차트 메뉴 선택
+    selected = st.sidebar.radio("차트 메뉴", ['가구당 평균 가격 추세', '가구당 거래 건수', '지역별 평균 가격 막대 그래프'])
+    
+    if selected =="가구당 평균 가격 추세":
+        meanChart(total_df, ssg_nm)
+    elif selected == "가구당 거래 건수":
+        cntChart(total_df, ssg_nm)
+    elif selected == "지역별 평균 가격 막대 그래프":
+        barChart(total_df)
+    else:
+        st.warning("Error")
+                                                                                                                     
