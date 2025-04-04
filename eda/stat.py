@@ -192,7 +192,7 @@ def regression(total_df):
     selected_month = st. sidebar.selectbox("월", sorted(corr_df['month'].unique()))
     
     # 선택한 자치구 및 월 필터링
-    reg_af = corr_df[(corr_df['CGG_NM'] == selected_cgg_nm) & (corr_df['month'] == selected_month)]
+    reg_df = corr_df[(corr_df['CGG_NM'] == selected_cgg_nm) & (corr_df['month'] == selected_month)]
                      
     st.markdown("### 데이터 확인")
     st.dataframe(reg_df, use_container_width=True)
