@@ -4,6 +4,7 @@ from streamlit_option_menu import option_menu
 from utils import load_data
 from home import run_home
 from eda.eda_home import run_eda
+from ml.ml_home import run_ml
 
 def main():
     st.set_page_config(page_title="빅데이터 분석 프로젝트", layout='wide')
@@ -21,7 +22,7 @@ def main():
     elif selected == "탐색적 자료분석":
         run_eda(total_df)
     elif selected == "부동산 예측":
-        st.markdown('부동산 예측입니다.')
+        run_ml(total_df)
     else:
         print("error..")
         
