@@ -7,7 +7,7 @@ import plotly.express as px
 import streamlit as st
 from scipy.stats import ttest_ind
 
-plt.rcparams['font.family'] = 'Malgun Gothic'
+plt.rcParams['font.family'] = 'Malgun Gothic'
 plt.rcParams['axes.unicode_minus'] = False
 
 def twoMeans(total_df):
