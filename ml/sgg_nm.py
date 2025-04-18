@@ -4,7 +4,7 @@ import pandas as pd
 import json
 from prophet.serialize import model_from_json
 
-plt.rcParams['font. family'] = "Malgun Gothic"
+plt.rcParams['font.family'] = "Malgun Gothic"
 
 #모델 불러오기 함수
 @st.cache_resource
