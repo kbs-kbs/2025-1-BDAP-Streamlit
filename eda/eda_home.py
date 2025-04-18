@@ -3,7 +3,7 @@ import pandas as pd
 from streamlit_option_menu import option_menu
 from eda.viz import showViz
 from eda.stat import showStat
-from eda.map import showMap
+# from eda.map import showMap
 
 def home():
     st.markdown("""### Visualization 개요 \n
@@ -41,6 +41,7 @@ def run_eda(total_df):
     elif selected == 'Statistics':
         showStat(total_df)
     elif selected == 'Map':
-        showMap(total_df)
+        # showMap(total_df)
+        pass
     else:
         st.warning("Wrong")
